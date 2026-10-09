@@ -1,8 +1,220 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-3n1ASHUKRvZ05lq7Rb9knBmOcLhVo3SepAyh/ROlhwA='; style-src 'self'; img-src 'self' data:; media-src 'self' spectrum-media: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'"><title>Open Spectrum</title><link rel="stylesheet" href="style.css"></head><body>
-<canvas id="visual" aria-label="Audio reactive visualization"></canvas>
-<header id="heading"><div><span class="eyebrow">OPEN SPECTRUM</span><h1 id="presetTitle">Radial spectrum</h1></div><div class="topActions"><span id="clock"></span><button id="fullscreen" title="Fullscreen (F)">⛶</button><button id="hide" title="Hide controls (H)">◉</button></div></header>
-<div id="trackInfo"></div><div id="status" role="status">Connecting to system audio…</div>
-<section id="gallery" class="panel" hidden><div class="panelHead"><div><span class="eyebrow">FIND YOUR FREQUENCY</span><h2>Visuals</h2></div><div class="palette"><button data-mode="0" title="White on black" aria-label="White on black">◯</button><button data-mode="1" class="rainbow" title="Color on black" aria-label="Color on black">◯</button><button data-mode="2" class="light" title="Dark on light" aria-label="Dark on light">◯</button><button data-mode="3" class="light rainbow" title="Color on light" aria-label="Color on light">◯</button></div><button id="closeGallery" aria-label="Close gallery">×</button></div><div class="galleryTools"><input id="search" placeholder="Find a visual…" aria-label="Search visuals"><label><input type="checkbox" id="shuffle"> Auto shuffle</label><span>✓ Include presets with the small check button</span></div><div id="cards"></div></section>
-<section id="settings" class="panel" hidden><div class="panelHead"><h2>Make it yours</h2><button id="closeSettings" aria-label="Close settings">×</button></div><label>Audio source <div class="sourceRow"><select id="source"></select><button id="refresh" title="Refresh audio sources">↻</button></div></label><label>Sensitivity <input type="range" id="gain" min="0.25" max="6" step="0.05"></label><label>Shuffle every <select id="duration"><option value="15">15 seconds</option><option value="30">30 seconds</option><option value="60">60 seconds</option><option value="90">90 seconds</option><option value="180">3 minutes</option></select></label><label>Render quality <select id="quality"><option value="1">Balanced</option><option value="1.5">High</option><option value="2">Ultra</option></select></label><label><input id="showClock" type="checkbox"> Show clock</label><label><input id="showTrack" type="checkbox"> Show song name</label><button id="diagnostics">Graphics information</button><p id="gpu"></p><p class="hint">F fullscreen · H hide controls · V visuals · ← → change visual · Space pause music · Esc close panels</p></section>
-<footer id="dock"><div class="transport"><button id="previous" title="Previous track">⏮</button><button id="play" title="Play or pause music">▶</button><button id="next" title="Next track">⏭</button></div><div class="divider"></div><button id="music" title="Open local music">♫ <span>Music</span></button><button id="system" title="Listen to computer audio">▣ <span>System</span></button><button id="microphone" title="Listen to microphone">♩ <span>Mic</span></button><div class="divider"></div><button id="galleryButton">▦ <span>Visuals</span></button><button id="settingsButton">⚙ <span>Settings</span></button><button id="demo">✧ <span>Demo</span></button><div class="meter"><i id="meter"></i></div></footer>
-<audio id="player" crossorigin="anonymous"></audio><script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script><script type="module" src="src/app.mjs"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'sha256-L9YJ4usjdU5ve9sdYFazaOr8j4o74HkxECAPgutoP50='; style-src 'self'; img-src 'self' data:; media-src 'self' spectrum-media: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'"
+    />
+    <title>Open Spectrum</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="visual" aria-label="Audio reactive visualization"></canvas>
+    <header id="heading">
+      <div>
+        <span class="eyebrow">OPEN SPECTRUM</span>
+        <h1 id="presetTitle">Radial spectrum</h1>
+      </div>
+      <div class="topActions">
+        <span id="clock"></span
+        ><button id="fullscreen" title="Fullscreen (F)">⛶</button
+        ><button id="hide" title="Hide controls (H)">◉</button>
+      </div>
+    </header>
+    <div id="trackInfo"></div>
+    <div id="status" role="status">Connecting to system audio…</div>
+    <section id="gallery" class="panel" hidden>
+      <div class="panelHead">
+        <div>
+          <span class="eyebrow">FIND YOUR FREQUENCY</span>
+          <h2>Visuals</h2>
+        </div>
+        <div class="palette">
+          <button
+            data-mode="0"
+            title="White on black"
+            aria-label="White on black"
+          >
+            ◯</button
+          ><button
+            data-mode="1"
+            class="rainbow"
+            title="Color on black"
+            aria-label="Color on black"
+          >
+            ◯</button
+          ><button
+            data-mode="2"
+            class="light"
+            title="Dark on light"
+            aria-label="Dark on light"
+          >
+            ◯</button
+          ><button
+            data-mode="3"
+            class="light rainbow"
+            title="Color on light"
+            aria-label="Color on light"
+          >
+            ◯
+          </button>
+        </div>
+        <button id="closeGallery" aria-label="Close gallery">×</button>
+      </div>
+      <div class="galleryTools">
+        <select id="collection" aria-label="Preset collection">
+          <option value="All">All collections</option></select
+        ><input
+          id="search"
+          placeholder="Find a visual…"
+          aria-label="Search visuals"
+        /><label><input type="checkbox" id="shuffle" /> Auto shuffle</label
+        ><span>✓ Include presets with the small check button</span>
+      </div>
+      <div id="cards"></div>
+    </section>
+    <section id="settings" class="panel" hidden>
+      <div class="panelHead">
+        <h2>Make it yours</h2>
+        <button id="closeSettings" aria-label="Close settings">×</button>
+      </div>
+      <label
+        >Audio source
+        <div class="sourceRow">
+          <select id="source"></select
+          ><button id="refresh" title="Refresh audio sources">↻</button>
+        </div></label
+      ><label
+        >Palette
+        <select id="palette">
+          <option value="rainbow">Rainbow</option>
+          <option value="custom">My gradient</option>
+        </select></label
+      >
+      <div class="colorPair">
+        <input
+          type="color"
+          id="colorA"
+          aria-label="Gradient first color"
+        /><input type="color" id="colorB" aria-label="Gradient second color" />
+      </div>
+      <label
+        >Motion speed
+        <input type="range" id="speed" min="0.1" max="3" step="0.05" /></label
+      ><label
+        >Audio deformation
+        <input type="range" id="deform" min="0.1" max="3" step="0.05" /></label
+      ><label
+        >Glow
+        <input type="range" id="bloom" min="0" max="2" step="0.05" /></label
+      ><label
+        >Custom preset name
+        <input
+          id="presetName"
+          type="text"
+          maxlength="80"
+          placeholder="Name your visual"
+      /></label>
+      <div class="presetActions">
+        <button id="savePreset">Save preset</button
+        ><button id="importPreset">Import</button
+        ><button id="exportPreset">Export</button>
+      </div>
+      <label
+        ><input id="autoHide" type="checkbox" /> Hide controls when idle</label
+      ><label
+        >Frame rate
+        <select id="fpsLimit">
+          <option value="30">30 FPS</option>
+          <option value="60">60 FPS</option>
+          <option value="120">120 FPS</option>
+        </select></label
+      ><label
+        >Attack
+        <input
+          type="range"
+          id="attack"
+          min="0.01"
+          max="0.2"
+          step="0.005" /></label
+      ><label
+        >Decay
+        <input
+          type="range"
+          id="release"
+          min="0.05"
+          max="0.8"
+          step="0.01" /></label
+      ><label
+        >Sensitivity
+        <input type="range" id="gain" min="0.25" max="6" step="0.05" /></label
+      ><label
+        >Shuffle every
+        <select id="duration">
+          <option value="15">15 seconds</option>
+          <option value="30">30 seconds</option>
+          <option value="60">60 seconds</option>
+          <option value="90">90 seconds</option>
+          <option value="180">3 minutes</option>
+        </select></label
+      ><label
+        >Render quality
+        <select id="quality">
+          <option value="1">Balanced</option>
+          <option value="1.5">High</option>
+          <option value="2">Ultra</option>
+        </select></label
+      ><label><input id="showClock" type="checkbox" /> Show clock</label
+      ><label><input id="showTrack" type="checkbox" /> Show song name</label
+      ><button id="diagnostics">Graphics information</button>
+      <p id="gpu"></p>
+      <p class="hint">
+        F fullscreen · H hide controls · V visuals · ← → change visual · Space
+        pause music · Esc close panels
+      </p>
+    </section>
+    <section id="playlistPanel" class="panel" hidden>
+      <div class="panelHead">
+        <h2>Your music</h2>
+        <button id="closePlaylist" aria-label="Close playlist">×</button>
+      </div>
+      <div class="playlistTools">
+        <button id="addMusic">Add music</button
+        ><label
+          ><input type="checkbox" id="trackShuffle" /> Shuffle tracks</label
+        >
+      </div>
+      <ol id="queue"></ol>
+      <p class="hint">
+        Click a song to play it. Use the arrows to reorder your queue.
+      </p>
+    </section>
+    <footer id="dock">
+      <div class="transport">
+        <button id="previous" title="Previous track">⏮</button
+        ><button id="play" title="Play or pause music">▶</button
+        ><button id="next" title="Next track">⏭</button>
+      </div>
+      <div class="divider"></div>
+      <button id="music" title="Open local music">♫ <span>Music</span></button
+      ><button id="system" title="Listen to computer audio">
+        ▣ <span>System</span></button
+      ><button id="microphone" title="Listen to microphone">
+        ♩ <span>Mic</span>
+      </button>
+      <div class="divider"></div>
+      <button id="playlistButton">≡ <span>Queue</span></button
+      ><button id="galleryButton">▦ <span>Visuals</span></button
+      ><button id="settingsButton">⚙ <span>Settings</span></button
+      ><button id="demo">✧ <span>Demo</span></button>
+      <div class="meter"><i id="meter"></i></div>
+    </footer>
+    <audio id="player" crossorigin="anonymous"></audio>
+    <script type="importmap">
+      { "imports": { "three": "./node_modules/three/build/three.module.js" } }
+    </script>
+    <script type="module" src="src/app.mjs"></script>
+  </body>
+</html>

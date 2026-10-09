@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "frames": 300,
+  "peakRMS": 0.017328448593616486,
+  "seconds": 5.137,
+  "capture": "Native PipeWire output-node capture via pw-cat",
+  "stderr": ""
+}

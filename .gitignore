@@ -5,3 +5,7 @@ preview.png
 gallery.png
 .env*
 core*
+native/target/
+node_modules
+procedural.png
+settings-preview.png

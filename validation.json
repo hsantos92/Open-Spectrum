@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "presets": 24,
-  "combinations": 96,
+  "presets": 56,
+  "combinations": 224,
   "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
   "results": [
     {
@@ -149,6 +149,198 @@
       "drawCalls": 1
     },
     {
+      "preset": "Aurora ribbons",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Bass reactor",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Deep space",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ice cathedral",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Solar flare",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour atlas",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Electric lattice",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Thread nebula",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid mercury",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Coil engine",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Distant signals",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum city",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Twin suns",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Chromatic rain",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Petal storm",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Slow tide",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mesh heartbeat",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hyperspace",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ripple pond",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hex resonance",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Halo choir",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Paper prisms",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbit garden",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency canyon",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cellular drift",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Neon cells",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Lava lamp",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Fluid interference",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mirror bloom",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prismatic mandala",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour plasma",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Signal storm",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
       "preset": "Radial spectrum",
       "mode": 1,
       "webglError": 0,
@@ -288,6 +480,198 @@
     },
     {
       "preset": "Frequency flower",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Aurora ribbons",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Bass reactor",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Deep space",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ice cathedral",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Solar flare",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour atlas",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Electric lattice",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Thread nebula",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid mercury",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Coil engine",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Distant signals",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum city",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Twin suns",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Chromatic rain",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Petal storm",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Slow tide",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mesh heartbeat",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hyperspace",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ripple pond",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hex resonance",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Halo choir",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Paper prisms",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbit garden",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency canyon",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cellular drift",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Neon cells",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Lava lamp",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Fluid interference",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mirror bloom",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prismatic mandala",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour plasma",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Signal storm",
       "mode": 1,
       "webglError": 0,
       "drawCalls": 1
@@ -437,6 +821,198 @@
       "drawCalls": 1
     },
     {
+      "preset": "Aurora ribbons",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Bass reactor",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Deep space",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ice cathedral",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 26
+    },
+    {
+      "preset": "Solar flare",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour atlas",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Electric lattice",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 27
+    },
+    {
+      "preset": "Thread nebula",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 2
+    },
+    {
+      "preset": "Liquid mercury",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Coil engine",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Distant signals",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum city",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Twin suns",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Chromatic rain",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Petal storm",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Slow tide",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mesh heartbeat",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 3
+    },
+    {
+      "preset": "Hyperspace",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ripple pond",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hex resonance",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Halo choir",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Paper prisms",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 22
+    },
+    {
+      "preset": "Orbit garden",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency canyon",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cellular drift",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Neon cells",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Lava lamp",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Fluid interference",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mirror bloom",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prismatic mandala",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour plasma",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Signal storm",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
       "preset": "Radial spectrum",
       "mode": 3,
       "webglError": 0,
@@ -576,18 +1152,224 @@
     },
     {
       "preset": "Frequency flower",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Aurora ribbons",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Bass reactor",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Deep space",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ice cathedral",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 26
+    },
+    {
+      "preset": "Solar flare",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour atlas",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Electric lattice",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 27
+    },
+    {
+      "preset": "Thread nebula",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 2
+    },
+    {
+      "preset": "Liquid mercury",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Coil engine",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Distant signals",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum city",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Twin suns",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Chromatic rain",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Petal storm",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Slow tide",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mesh heartbeat",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 3
+    },
+    {
+      "preset": "Hyperspace",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Ripple pond",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hex resonance",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Halo choir",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Paper prisms",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 22
+    },
+    {
+      "preset": "Orbit garden",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency canyon",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cellular drift",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Neon cells",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Lava lamp",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Fluid interference",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Mirror bloom",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prismatic mandala",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour plasma",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Signal storm",
       "mode": 3,
       "webglError": 0,
       "drawCalls": 1
     }
   ],
+  "interactions": {
+    "passed": true,
+    "checks": {
+      "galleryFilter": true,
+      "transitionStarted": true,
+      "transitionCompleted": true,
+      "gradient": true,
+      "customSaved": true,
+      "queueReorder": true,
+      "queueRemove": true,
+      "idleHide": true,
+      "pointerReveal": true
+    }
+  },
   "playback": {
     "passed": true,
-    "currentTime": 0.448,
+    "currentTime": 0.512,
     "frequencyPeak": 196
   },
   "audio": {
-    "packets": 57,
+    "packets": 230,
     "peak": 0.017336533361760092,
     "passed": true
   },

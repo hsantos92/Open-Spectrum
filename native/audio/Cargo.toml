@@ -1,0 +1,9 @@
+[package]
+name = "spectrum-audio"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+rustfft = "6.4.1"
+serde_json = "1.0"

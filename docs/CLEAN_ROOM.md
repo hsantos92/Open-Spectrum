@@ -23,3 +23,7 @@ Technical references:
 - https://docs.rs/rustfft/latest/rustfft/
 - https://pipewire.pages.freedesktop.org/pipewire/page_man_pw-cat_1.html
 - https://gstreamer.freedesktop.org/documentation/app/index.html
+
+The transparent rendering/window pattern was informed by the user's independent
+Neon-Orb and Neon-Face projects and Electron's window-style documentation. Those
+references are unrelated to Spectrum's proprietary implementation.

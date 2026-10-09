@@ -1,0 +1,3633 @@
+{
+  "passed": true,
+  "opaque": {
+    "passed": true,
+    "transparent": false,
+    "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+    "combinations": 224,
+    "results": [
+      {
+        "preset": "Radial spectrum",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 0,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 1,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 2,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 3,
+        "minAlpha": 255,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0,
+        "webglError": 0
+      }
+    ]
+  },
+  "transparent": {
+    "passed": true,
+    "transparent": true,
+    "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+    "combinations": 224,
+    "results": [
+      {
+        "preset": "Radial spectrum",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9988966642987772,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 242,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 202,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 230,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9932590722911597,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999244290615601,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 220,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9847648988105134,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 241,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9990175778002811,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 230,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 254,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 212,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9993652041171047,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 214,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9990175778002811,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9996070311201124,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 244,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 227,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999093148738721,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 225,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 228,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9981711832897541,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 235,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.995571543007421,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 222,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 233,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9995616885570485,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9997128304339283,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 239,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 224,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9998942006861842,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 0,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9969771624624034,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 220,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 208,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9932137297280957,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9941356951770627,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9986699514834575,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9994710034309207,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 221,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9965388510194519,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 232,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 0,
+        "minAlpha": 28,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8883666097365597,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 0,
+        "minAlpha": 34,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8763659447123014,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.7993591584420295,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 0,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.7896558499463446,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 0,
+        "minAlpha": 4,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9398908755648928,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 0,
+        "minAlpha": 7,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9233408400465517,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 0,
+        "minAlpha": 6,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9558665719510905,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 0,
+        "minAlpha": 18,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.96680924383719,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9996826020585524,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 243,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 243,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 237,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9985036954188897,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9878481930988618,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9905234043196348,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 242,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 236,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 212,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 241,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999984885812312,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 215,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 224,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 240,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 251,
+        "nonOpaqueRatio": 0.9999093148738721,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 247,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 237,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9988059791726493,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 219,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 234,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9996674878708643,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 1,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999244290615601,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9998790864984961,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 215,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 230,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 248,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.970270392817738,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 250,
+        "nonOpaqueRatio": 0.999984885812312,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 228,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 235,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 213,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9995919169324244,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 1,
+        "minAlpha": 2,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9940450100509348,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 214,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9987152940465215,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9939694391124949,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9975968441576107,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 252,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 238,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 1,
+        "minAlpha": 11,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9478107099133957,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 1,
+        "minAlpha": 15,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9338149721143237,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8111633390263441,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8028203074225776,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 1,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9863065459546877,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 1,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9761346976406753,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 1,
+        "minAlpha": 2,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9799888155011109,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 1,
+        "minAlpha": 4,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.985974033825552,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9988966642987772,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 242,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 196,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 233,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9932590722911597,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999244290615601,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 220,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9847648988105134,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 241,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9990175778002811,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 230,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 254,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 212,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9993652041171047,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 214,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9990175778002811,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9995465743693606,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 240,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 227,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999093148738721,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 225,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 228,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9981711832897541,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 235,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.995571543007421,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 222,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 233,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9995616885570485,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9997128304339283,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 240,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 229,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 224,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9998942006861842,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 2,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9969771624624034,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 220,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 208,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9932137297280957,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9941356951770627,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9986548372957695,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9994558892432326,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 221,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9965388510194519,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 232,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 2,
+        "minAlpha": 28,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8883666097365597,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 2,
+        "minAlpha": 34,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8763659447123014,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.7993591584420295,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 2,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.7896558499463446,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 2,
+        "minAlpha": 4,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9398908755648928,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 2,
+        "minAlpha": 7,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9233408400465517,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 2,
+        "minAlpha": 6,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9558665719510905,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 2,
+        "minAlpha": 18,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.96680924383719,
+        "webglError": 0
+      },
+      {
+        "preset": "Radial spectrum",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9996826020585524,
+        "webglError": 0
+      },
+      {
+        "preset": "Wave terrain",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 243,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Star tunnel",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 243,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pulse rings",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 237,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Wire globe",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9985036954188897,
+        "webglError": 0
+      },
+      {
+        "preset": "Constellation",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9878481930988618,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum waterfall",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Warp tunnel",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9905234043196348,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbital paths",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 242,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Prism bloom",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Sine ribbons",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 236,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Dancing bars",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 212,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour ocean",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 241,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Particle sphere",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999984885812312,
+        "webglError": 0
+      },
+      {
+        "preset": "Cube lattice",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Nine halos",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 215,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spiral vortex",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 224,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Crystal cluster",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Oscilloscope",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 240,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Hexagon field",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 251,
+        "nonOpaqueRatio": 0.9999093148738721,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid loops",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 247,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Satellite rings",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 237,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Pixel rain",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9988059791726493,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency flower",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 219,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Aurora ribbons",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 234,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Bass reactor",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9996674878708643,
+        "webglError": 0
+      },
+      {
+        "preset": "Deep space",
+        "mode": 3,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9999244290615601,
+        "webglError": 0
+      },
+      {
+        "preset": "Ice cathedral",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9998790864984961,
+        "webglError": 0
+      },
+      {
+        "preset": "Solar flare",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 215,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour atlas",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 230,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Electric lattice",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 248,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Thread nebula",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.970270392817738,
+        "webglError": 0
+      },
+      {
+        "preset": "Liquid mercury",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 250,
+        "nonOpaqueRatio": 0.999984885812312,
+        "webglError": 0
+      },
+      {
+        "preset": "Coil engine",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 228,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Distant signals",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 235,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Spectrum city",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 213,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Twin suns",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9995919169324244,
+        "webglError": 0
+      },
+      {
+        "preset": "Chromatic rain",
+        "mode": 3,
+        "minAlpha": 2,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9940450100509348,
+        "webglError": 0
+      },
+      {
+        "preset": "Petal storm",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 214,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Slow tide",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Mesh heartbeat",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9987152940465215,
+        "webglError": 0
+      },
+      {
+        "preset": "Hyperspace",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9939694391124949,
+        "webglError": 0
+      },
+      {
+        "preset": "Ripple pond",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9975968441576107,
+        "webglError": 0
+      },
+      {
+        "preset": "Hex resonance",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 252,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Halo choir",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 217,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Paper prisms",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.999954657436936,
+        "webglError": 0
+      },
+      {
+        "preset": "Orbit garden",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 238,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Frequency canyon",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 246,
+        "nonOpaqueRatio": 1,
+        "webglError": 0
+      },
+      {
+        "preset": "Cellular drift",
+        "mode": 3,
+        "minAlpha": 11,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9478107099133957,
+        "webglError": 0
+      },
+      {
+        "preset": "Neon cells",
+        "mode": 3,
+        "minAlpha": 15,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9338149721143237,
+        "webglError": 0
+      },
+      {
+        "preset": "Lava lamp",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8111633390263441,
+        "webglError": 0
+      },
+      {
+        "preset": "Fluid interference",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.8028203074225776,
+        "webglError": 0
+      },
+      {
+        "preset": "Mirror bloom",
+        "mode": 3,
+        "minAlpha": 0,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9863065459546877,
+        "webglError": 0
+      },
+      {
+        "preset": "Prismatic mandala",
+        "mode": 3,
+        "minAlpha": 1,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9761346976406753,
+        "webglError": 0
+      },
+      {
+        "preset": "Contour plasma",
+        "mode": 3,
+        "minAlpha": 2,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.9799888155011109,
+        "webglError": 0
+      },
+      {
+        "preset": "Signal storm",
+        "mode": 3,
+        "minAlpha": 4,
+        "maxAlpha": 255,
+        "nonOpaqueRatio": 0.985974033825552,
+        "webglError": 0
+      }
+    ]
+  },
+  "nativeAlpha": {
+    "min": 0,
+    "max": 255,
+    "passed": true
+  },
+  "playback": {
+    "passed": true,
+    "currentTime": 0.490667,
+    "frequencyPeak": 196
+  },
+  "sessionPreserved": true,
+  "features": {
+    "2d_canvas": "enabled",
+    "direct_rendering_display_compositor": "disabled_off_ok",
+    "gpu_compositing": "enabled",
+    "multiple_raster_threads": "enabled_on",
+    "opengl": "enabled_on",
+    "rasterization": "enabled",
+    "raw_draw": "disabled_off_ok",
+    "skia_graphite": "disabled_off",
+    "trees_in_viz": "disabled_off",
+    "video_decode": "enabled",
+    "video_encode": "disabled_software",
+    "vulkan": "disabled_off",
+    "webgl": "enabled",
+    "webgpu": "enabled",
+    "webgpu_on_vk_via_gl_interop": "enabled",
+    "webnn": "disabled_off"
+  },
+  "errors": []
+}

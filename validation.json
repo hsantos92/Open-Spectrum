@@ -1365,11 +1365,11 @@
   },
   "playback": {
     "passed": true,
-    "currentTime": 0.512,
+    "currentTime": 0.490667,
     "frequencyPeak": 196
   },
   "audio": {
-    "packets": 230,
+    "packets": 233,
     "peak": 0.017336533361760092,
     "passed": true
   },

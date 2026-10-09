@@ -1,13 +1,14 @@
 {
   "name": "open-spectrum",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Independent open source music visualizer for Linux",
   "license": "MIT",
   "main": "main.cjs",
   "scripts": {
     "start": "electron . --ozone-platform=wayland",
     "test": "node --test test/*.test.cjs test/*.test.mjs",
-    "check": "node --check main.cjs && node --check preload.cjs && node --check src/app.mjs && node --check src/visuals.mjs && node --check src/audio-features.mjs && node --check src/procedural.mjs && node --check src/preset-schema.mjs"
+    "check": "node --check main.cjs && node --check preload.cjs && node --check src/app.mjs && node --check src/visuals.mjs && node --check src/audio-features.mjs && node --check src/procedural.mjs && node --check src/preset-schema.mjs && node --check src/alpha-output.mjs",
+    "start:transparent": "electron . --ozone-platform=wayland --transparent"
   },
   "dependencies": {
     "three": "0.180.0"

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="dragHandle" aria-label="Move window">
+      Open Spectrum · drag to move
+    </div>
     <canvas id="visual" aria-label="Audio reactive visualization"></canvas>
     <header id="heading">
       <div>
@@ -20,7 +23,14 @@
       <div class="topActions">
         <span id="clock"></span
         ><button id="fullscreen" title="Fullscreen (F)">⛶</button
-        ><button id="hide" title="Hide controls (H)">◉</button>
+        ><button id="hide" title="Hide controls (H)">◉</button
+        ><button
+          id="closeWindow"
+          title="Close window"
+          aria-label="Close window"
+        >
+          ×
+        </button>
       </div>
     </header>
     <div id="trackInfo"></div>
@@ -80,6 +90,15 @@
         <h2>Make it yours</h2>
         <button id="closeSettings" aria-label="Close settings">×</button>
       </div>
+      <label
+        >Background<select id="windowMode">
+          <option value="normal">Solid background</option>
+          <option value="transparent">Transparent desktop overlay</option>
+        </select></label
+      >
+      <p class="hint" id="windowHint">
+        Transparency keeps the visuals and glow over your desktop.
+      </p>
       <label
         >Audio source
         <div class="sourceRow">

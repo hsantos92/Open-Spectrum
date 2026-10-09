@@ -81,3 +81,30 @@ see [the roadmap](docs/ROADMAP.md) and [native audio workspace](native/README.md
 New desktop metadata uses optional `playerctl` and `ffprobe` tools. The Rust
 workspace requires Cargo and `pw-cat` for native capture. The desktop application
 works without building the native component.
+
+## Transparent desktop overlay (0.3.0 preview)
+
+Choose **Settings → Background → Transparent desktop overlay**. The preference
+is remembered. Switch back to **Solid background** for the normal window.
+The native window is recreated, preserving the selected preset, settings, source,
+queue, current music position and paused state. A brief visual/audio restart can
+occur while the replacement window initializes.
+
+Use the **Launch Transparent** action on the GNOME launcher, or run
+`npm run start:transparent` / `./launch.sh --transparent`. `./launch.sh --opaque`
+forces a solid window if you need a fallback. Transparency retains glow and
+clears empty pixels; white/black background palette choices become white/rainbow
+foreground choices while the desktop remains visible.
+
+In overlay mode, drag the small top strip or use GNOME's Super + drag gesture.
+The **×** button closes the frameless window. Transparent pixels are not
+click-through. Window placement and resizing depend on GNOME/Wayland; if resize
+behaves poorly, size the solid window before switching to transparent.
+
+`python3 install.py --preview` installs **Open Spectrum Preview** alongside the
+existing apps, with independent preferences.
+
+`./launch.sh --verify-transparency --opaque` tests the opaque/transparent alpha
+output for all 224 preset/color combinations in each mode, captures a native
+transparent window image, and tests round-trip session/music preservation.
+See `transparency-validation.json`.

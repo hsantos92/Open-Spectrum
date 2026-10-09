@@ -396,7 +396,7 @@ for (const key of [
           ? el.value
           : Number(el.value);
     if (key === "quality") {
-      visuals.renderer.setPixelRatio(Math.min(devicePixelRatio, state.quality));
+      visuals.qualityLimit = state.quality;
       visuals.resize();
     }
     if (key === "showTrack")
@@ -453,15 +453,23 @@ window.addEventListener("keydown", (e) => {
     $("play").click();
   }
 });
-window.addEventListener("resize", () => visuals.resize());
+window.addEventListener("resize", () => visuals.scheduleResize());
 bridge.onFrame((f) => {
   frame = f;
   lastAudio = performance.now();
 });
 bridge.onStatus(message);
+let totalRendered = 0,
+  lastRenderedAt = 0,
+  longestFrameGap = 0;
 function animate(ms) {
   requestAnimationFrame(animate);
-  if (document.hidden || ms - lastRender < 1000 / state.fpsLimit - 0.5) return;
+  if (
+    document.hidden ||
+    visuals.resizing ||
+    ms - lastRender < 1000 / state.fpsLimit - 0.5
+  )
+    return;
   lastRender = ms;
   const open = ["gallery", "settings", "playlistPanel"].some(
     (id) => !$(id).hidden,
@@ -529,6 +537,10 @@ function animate(ms) {
       setPreset(available[Math.floor(Math.random() * available.length)], true);
     lastShuffle = t;
   }
+  totalRendered++;
+  if (lastRenderedAt)
+    longestFrameGap = Math.max(longestFrameGap, ms - lastRenderedAt);
+  lastRenderedAt = ms;
   frames++;
   if (ms - fpsAt >= 1000) {
     fps = Math.round((frames * 1000) / (ms - fpsAt));
@@ -802,7 +814,7 @@ $("windowMode").onchange = async () => {
 };
 $("closeWindow").onclick = () => bridge.close();
 buildGallery();
-visuals.renderer.setPixelRatio(Math.min(devicePixelRatio, state.quality));
+visuals.qualityLimit = state.quality;
 visuals.resize();
 if (restoredSession) {
   playlist = restoredSession.playlist || [];
@@ -914,3 +926,18 @@ window.previewTransparentRing = async () => {
   manualHide = false;
   document.body.classList.remove("hiddenControls");
 };
+
+window.samplePerformance = async (duration = 1500) => {
+  const count = totalRendered,
+    start = performance.now();
+  longestFrameGap = 0;
+  await new Promise((r) => setTimeout(r, duration));
+  return {
+    fps: ((totalRendered - count) * 1000) / (performance.now() - start),
+    longestFrameGap,
+    viewport: { width: innerWidth, height: innerHeight },
+    ...visuals.diagnostics(),
+  };
+};
+window.resetTransitionTiming=()=>{longestFrameGap=0;lastRenderedAt=performance.now();};
+window.transitionTiming=()=>({longestFrameGap,resizeCount:visuals.resizeCount});

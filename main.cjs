@@ -19,6 +19,7 @@ let win,
   allowedFiles = new Map();
 const verify = process.argv.includes("--verify");
 const verifyTransparency = process.argv.includes("--verify-transparency");
+const verifyExpand = process.argv.includes("--verify-expand");
 let windowMode = "normal",
   switchingWindow = false;
 const windowSessions = new Map();
@@ -37,7 +38,7 @@ app.commandLine.appendSwitch(
   "Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
 );
 app.commandLine.appendSwitch("use-angle", "gl");
-if (verify || verifyTransparency)
+if (verify || verifyTransparency || verifyExpand)
   app.setPath("userData", path.join(__dirname, ".verify-profile"));
 protocol.registerSchemesAsPrivileged([
   {
@@ -124,10 +125,29 @@ async function start(name) {
 ipcMain.handle("sources", () => sources());
 ipcMain.handle("capture", (_, name) => start(name));
 ipcMain.handle("stop", () => stop());
-ipcMain.handle("fullscreen", () => {
+let expandPending = false;
+async function toggleExpanded() {
+  if (expandPending) return;
+  expandPending = true;
+  setTimeout(() => {
+    expandPending = false;
+  }, 400);
+  if (windowMode === "transparent") {
+    if (win.isFullScreen()) {
+      win.setFullScreen(false);
+      return false;
+    }
+    if (win.isMaximized()) {
+      win.unmaximize();
+      return false;
+    }
+    win.maximize();
+    return true;
+  }
   win.setFullScreen(!win.isFullScreen());
   return win.isFullScreen();
-});
+}
+ipcMain.handle("fullscreen", () => toggleExpanded());
 ipcMain.handle("music", async () => {
   const result = await dialog.showOpenDialog(win, {
     properties: ["openFile", "multiSelections"],
@@ -283,10 +303,13 @@ async function changeWindowMode(mode) {
     const snapshot = await old.webContents.executeJavaScript(
       "window.sessionSnapshot()",
     );
-    const fullscreen = old.isFullScreen();
+    const fullscreen = old.isFullScreen() || old.isMaximized();
     windowMode = mode;
     const created = await createWindow(old.getBounds(), snapshot);
-    if (fullscreen) created.setFullScreen(true);
+    if (fullscreen) {
+      if (windowMode === "transparent") created.maximize();
+      else created.setFullScreen(true);
+    }
     fs.mkdirSync(app.getPath("userData"), { recursive: true });
     fs.writeFileSync(
       path.join(app.getPath("userData"), "window-mode.json"),
@@ -333,6 +356,80 @@ app.whenReady().then(async () => {
     return new Response(response.body, { status: response.status, headers });
   });
   await createWindow();
+  if (verifyExpand) {
+    try {
+      await win.webContents.executeJavaScript(
+        "window.previewTransparentRing()",
+      );
+      const before = await win.webContents.executeJavaScript(
+        "window.samplePerformance(1000)",
+      );
+      const transitions = [];
+      for (let i = 0; i < 2; i++) {
+        await win.webContents.executeJavaScript("window.resetTransitionTiming()");
+        await toggleExpanded();
+        await new Promise((r) => setTimeout(r, 900));
+        const entering=await win.webContents.executeJavaScript("window.transitionTiming()");
+        const expanded = await win.webContents.executeJavaScript(
+          "window.samplePerformance(1200)",
+        );
+        const image = await win.webContents.capturePage();
+        const pixels = image.toBitmap();
+        let min = 255,
+          max = 0;
+        for (let k = 3; k < pixels.length; k += 4 * 37) {
+          min = Math.min(min, pixels[k]);
+          max = Math.max(max, pixels[k]);
+        }
+        const native = {
+          maximized: win.isMaximized(),
+          fullscreen: win.isFullScreen(),
+          minAlpha: min,
+          maxAlpha: max,
+        };
+        if (i === 0)
+          fs.writeFileSync(
+            path.join(__dirname, "expanded-preview.png"),
+            image.toPNG(),
+          );
+        await win.webContents.executeJavaScript("window.resetTransitionTiming()");
+        await toggleExpanded();
+        await new Promise((r) => setTimeout(r, 900));
+        const leaving=await win.webContents.executeJavaScript("window.transitionTiming()");
+        const restored = await win.webContents.executeJavaScript(
+          "window.samplePerformance(1000)",
+        );
+        transitions.push({ expanded, restored, native, entering, leaving });
+      }
+      const report = {
+        passed: transitions.every(
+          (t) =>
+            t.native.maximized &&
+            !t.native.fullscreen &&
+            t.native.minAlpha === 0 &&
+            t.expanded.webglError === 0 &&
+            t.restored.webglError === 0 &&
+            t.expanded.renderSize.width * t.expanded.renderSize.height <=
+              t.expanded.renderSize.budget &&
+            t.restored.resizeCount - t.expanded.resizeCount <= 2 &&
+            t.restored.fps > 30,
+        ),
+        before,
+        transitions,
+        errors,
+      };
+      fs.writeFileSync(
+        path.join(__dirname, "fullscreen-validation.json"),
+        JSON.stringify(report, null, 2),
+      );
+      console.log(JSON.stringify(report));
+      app.exit(report.passed && errors.length === 0 ? 0 : 1);
+    } catch (error) {
+      console.error(error);
+      app.exit(1);
+    }
+    return;
+  }
   if (verifyTransparency) {
     try {
       await new Promise((r) => setTimeout(r, 1800));

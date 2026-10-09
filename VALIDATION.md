@@ -32,3 +32,12 @@ Native window captures contain fully clear pixels (alpha 0) and opaque UI pixels
 (alpha 255). Window recreation preserved visual settings, queue, local playback
 position and pause state. The existing solid-window interaction/audio checks
 passed again. See transparency-validation.json for detailed output.
+
+### Expanded overlay / resize follow-up
+
+Two actual transparent-overlay expand/restore cycles passed, retaining clear
+native pixels. Rendering measured about 58–59 FPS in the selected portrait work
+area and 59 FPS after restore. Transition frame gaps were 171–189ms; resize counts
+increased once per transition. 4K/8K/ultrawide allocation-budget unit tests and
+the full transparency/session-restoration regression passed. See
+fullscreen-validation.json; no 4K frame-rate claim is made.

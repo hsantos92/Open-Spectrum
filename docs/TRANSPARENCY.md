@@ -35,3 +35,28 @@ Commands:
 Transparent pixels are not click-through. If transparent resizing is unreliable,
 resize the solid window first. See Electron's documented platform limitations:
 https://www.electronjs.org/docs/latest/tutorial/custom-window-styles
+
+## Expanded overlay and resize fix
+
+F now maximizes/unmaximizes transparent windows instead of using native
+fullscreen. This preserves compositing of the desktop; it fills the GNOME work
+area rather than promising hidden panels. Solid windows retain native fullscreen.
+
+The previous resize path called composer.setPixelRatio (which itself resizes)
+and composer.setSize on every event. It also allowed high-DPI fullscreen buffers
+to multiply in size across the bloom pipeline. The new path fixes the renderer
+and composer pixel ratio at 1, computes bounded internal dimensions once, skips
+unchanged sizes, consolidates resize events for 160ms, and pauses rendering while
+those events settle. Balanced/High/Ultra allocation budgets are approximately
+1080p/1440p/4K.
+
+Two actual expanded/windowed round trips on GNOME retained native alpha 0–255
+and reported approximately 59 FPS in both sizes. Each transition resized the
+postprocessing buffers once. The test ran on the display GNOME selected (portrait
+1080x1889 work area); pure allocation tests also cover 4K, 8K and ultrawide sizes.
+This is not a measured 4K performance guarantee. See fullscreen-validation.json.
+
+Measured transition frame gaps after the fix were 171–189ms, including the
+intentional resize-event settling period. No multi-second stalls occurred in
+the tested round trips. More demanding presets and other displays still need
+user-side confirmation.

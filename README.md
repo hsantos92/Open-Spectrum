@@ -108,3 +108,11 @@ existing apps, with independent preferences.
 output for all 224 preset/color combinations in each mode, captures a native
 transparent window image, and tests round-trip session/music preservation.
 See `transparency-validation.json`.
+
+In transparent mode, **F expands/restores a maximized overlay** rather than
+requesting native fullscreen, which can make the background opaque. GNOME's
+panel/work area may remain visible. Solid mode still uses normal fullscreen.
+Resize events are consolidated, and internal glow rendering is bounded by the
+quality setting: Balanced about 1080p, High about 1440p, Ultra up to 4K. This caps
+postprocessing allocations on large/high-DPI displays while keeping the canvas
+fitted to the window.

@@ -1826,7 +1826,7 @@
         "preset": "Star tunnel",
         "mode": 0,
         "minAlpha": 0,
-        "maxAlpha": 202,
+        "maxAlpha": 210,
         "nonOpaqueRatio": 1,
         "webglError": 0
       },
@@ -1834,7 +1834,7 @@
         "preset": "Pulse rings",
         "mode": 0,
         "minAlpha": 0,
-        "maxAlpha": 230,
+        "maxAlpha": 232,
         "nonOpaqueRatio": 1,
         "webglError": 0
       },
@@ -3607,7 +3607,7 @@
   },
   "playback": {
     "passed": true,
-    "currentTime": 0.490667,
+    "currentTime": 0.48,
     "frequencyPeak": 196
   },
   "sessionPreserved": true,

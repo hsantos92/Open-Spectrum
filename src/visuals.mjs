@@ -7,6 +7,7 @@ import { alphaOutputShader } from "./alpha-output.mjs";
 import catalog from "../presets/builtin.json" with { type: "json" };
 export const presets = catalog;
 import { procedural } from "./procedural.mjs";
+import { renderSize } from "./render-size.mjs";
 const TAU = Math.PI * 2;
 export class Visuals {
   constructor(canvas, { transparent = false } = {}) {
@@ -19,7 +20,11 @@ export class Visuals {
       powerPreference: "high-performance",
       preserveDrawingBuffer: true,
     });
-    this.renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+    this.renderer.setPixelRatio(1);
+    this.qualityLimit = 1.5;
+    this.resizing = false;
+    this.resizeCount = 0;
+    this.resizeTimer = null;
     this.camera = new THREE.PerspectiveCamera(52, 1, 0.1, 100);
     this.camera.position.set(0, 0, 13);
     this.scene = new THREE.Scene();
@@ -51,13 +56,31 @@ export class Visuals {
   get drawMode() {
     return this.transparent ? this.mode % 2 : this.mode;
   }
+  scheduleResize() {
+    this.resizing = true;
+    clearTimeout(this.resizeTimer);
+    this.resizeTimer = setTimeout(() => {
+      this.resize();
+      this.resizing = false;
+    }, 160);
+  }
   resize() {
     const c = this.renderer.domElement;
-    this.renderer.setSize(c.clientWidth, c.clientHeight, false);
-    this.camera.aspect = c.clientWidth / c.clientHeight;
+    const width = Math.max(1, c.clientWidth),
+      height = Math.max(1, c.clientHeight);
+    const target = renderSize(
+      width,
+      height,
+      devicePixelRatio,
+      this.qualityLimit,
+    );
+    this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
-    this.composer.setPixelRatio(this.renderer.getPixelRatio());
-    this.composer.setSize(c.clientWidth, c.clientHeight);
+    if (c.width === target.width && c.height === target.height) return;
+    this.renderer.setSize(target.width, target.height, false);
+    this.composer.setSize(target.width, target.height);
+    this.resizeCount++;
+    this.renderTarget = target;
   }
   dispose() {
     for (const o of [...this.group.children]) {
@@ -509,6 +532,8 @@ export class Visuals {
         : gl.getParameter(gl.RENDERER),
       webglError: gl.getError(),
       drawCalls: this.renderer.info.render.calls,
+      renderSize: this.renderTarget,
+      resizeCount: this.resizeCount,
     };
   }
   thumbnail() {

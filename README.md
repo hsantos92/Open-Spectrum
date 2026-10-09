@@ -2,6 +2,9 @@
 
 An independent MIT-licensed music visualizer for Arch Linux and GNOME Wayland.
 Open Spectrum has its own name, artwork, layout, and 56 original presets.
+<img width="2648" height="1788" alt="image" src="https://github.com/user-attachments/assets/0ab50d81-d58c-48fd-8524-7d4de318a715" />
+<img width="2648" height="1788" alt="image" src="https://github.com/user-attachments/assets/caddc6a4-1396-4375-a845-1d4f2dc2ec52" />
+<img width="2560" height="1700" alt="image" src="https://github.com/user-attachments/assets/10b47fec-48e7-42c4-a53b-2612ce6365cd" />
 
 ## Launch
 

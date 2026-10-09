@@ -1,0 +1,642 @@
+{
+  "passed": true,
+  "presets": 24,
+  "combinations": 96,
+  "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+  "results": [
+    {
+      "preset": "Radial spectrum",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wave terrain",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Star tunnel",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pulse rings",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wire globe",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Constellation",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum waterfall",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Warp tunnel",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbital paths",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prism bloom",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Sine ribbons",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Dancing bars",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour ocean",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Particle sphere",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cube lattice",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Nine halos",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spiral vortex",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Crystal cluster",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Oscilloscope",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hexagon field",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid loops",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Satellite rings",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pixel rain",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency flower",
+      "mode": 0,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Radial spectrum",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wave terrain",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Star tunnel",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pulse rings",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wire globe",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Constellation",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spectrum waterfall",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Warp tunnel",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbital paths",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prism bloom",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Sine ribbons",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Dancing bars",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour ocean",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Particle sphere",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cube lattice",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Nine halos",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spiral vortex",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Crystal cluster",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Oscilloscope",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hexagon field",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid loops",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Satellite rings",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pixel rain",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency flower",
+      "mode": 1,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Radial spectrum",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wave terrain",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Star tunnel",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pulse rings",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wire globe",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 3
+    },
+    {
+      "preset": "Constellation",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 2
+    },
+    {
+      "preset": "Spectrum waterfall",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Warp tunnel",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbital paths",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prism bloom",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 16
+    },
+    {
+      "preset": "Sine ribbons",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Dancing bars",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour ocean",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Particle sphere",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cube lattice",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 27
+    },
+    {
+      "preset": "Nine halos",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spiral vortex",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Crystal cluster",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 16
+    },
+    {
+      "preset": "Oscilloscope",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hexagon field",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid loops",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Satellite rings",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pixel rain",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency flower",
+      "mode": 2,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Radial spectrum",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wave terrain",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Star tunnel",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pulse rings",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Wire globe",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 3
+    },
+    {
+      "preset": "Constellation",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 2
+    },
+    {
+      "preset": "Spectrum waterfall",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Warp tunnel",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Orbital paths",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Prism bloom",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 16
+    },
+    {
+      "preset": "Sine ribbons",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Dancing bars",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Contour ocean",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Particle sphere",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Cube lattice",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 27
+    },
+    {
+      "preset": "Nine halos",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Spiral vortex",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Crystal cluster",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 16
+    },
+    {
+      "preset": "Oscilloscope",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Hexagon field",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Liquid loops",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Satellite rings",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Pixel rain",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    },
+    {
+      "preset": "Frequency flower",
+      "mode": 3,
+      "webglError": 0,
+      "drawCalls": 1
+    }
+  ],
+  "playback": {
+    "passed": true,
+    "currentTime": 0.448,
+    "frequencyPeak": 196
+  },
+  "audio": {
+    "packets": 57,
+    "peak": 0.017336533361760092,
+    "passed": true
+  },
+  "features": {
+    "2d_canvas": "enabled",
+    "direct_rendering_display_compositor": "disabled_off_ok",
+    "gpu_compositing": "enabled",
+    "multiple_raster_threads": "enabled_on",
+    "opengl": "enabled_on",
+    "rasterization": "enabled",
+    "raw_draw": "disabled_off_ok",
+    "skia_graphite": "disabled_off",
+    "trees_in_viz": "disabled_off",
+    "video_decode": "enabled",
+    "video_encode": "disabled_software",
+    "vulkan": "disabled_off",
+    "webgl": "enabled",
+    "webgpu": "enabled",
+    "webgpu_on_vk_via_gl_interop": "enabled",
+    "webnn": "disabled_off"
+  },
+  "gpu": {
+    "auxAttributes": {
+      "amdSwitchable": false,
+      "canSupportThreadedTextureMailbox": false,
+      "glImplementationParts": "(gl=none,angle=none)",
+      "glResetNotificationStrategy": 0,
+      "hardwareSupportsVulkan": false,
+      "inProcessGpu": true,
+      "initializationTime": 0,
+      "isAsan": false,
+      "isClangCoverage": false,
+      "jpegDecodeAcceleratorSupported": false,
+      "optimus": false,
+      "passthroughCmdDecoder": false,
+      "sandboxed": false,
+      "skiaBackendType": "None",
+      "subpixelFontRendering": true,
+      "targetCpuBits": 64,
+      "visibilityCallbackCallCount": 0
+    },
+    "gpuDevice": [
+      {
+        "active": true,
+        "deviceId": 9860,
+        "gpuPreference": 0,
+        "vendorId": 4318
+      }
+    ]
+  },
+  "errors": []
+}

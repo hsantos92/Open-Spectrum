@@ -1,0 +1,2 @@
+const {contextBridge,ipcRenderer}=require('electron');
+contextBridge.exposeInMainWorld('desktop',{sources:()=>ipcRenderer.invoke('sources'),capture:name=>ipcRenderer.invoke('capture',name),stop:()=>ipcRenderer.invoke('stop'),music:()=>ipcRenderer.invoke('music'),fullscreen:()=>ipcRenderer.invoke('fullscreen'),diagnostics:()=>ipcRenderer.invoke('diagnostics'),onFrame:fn=>ipcRenderer.on('audio-frame',(_e,v)=>fn(v)),onStatus:fn=>ipcRenderer.on('audio-status',(_e,v)=>fn(v))});

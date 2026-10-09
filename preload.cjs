@@ -1,5 +1,8 @@
 const { contextBridge, ipcRenderer } = require("electron");
 contextBridge.exposeInMainWorld("desktop", {
+  windowSession: () => ipcRenderer.invoke("window-session"),
+  windowMode: (mode) => ipcRenderer.invoke("window-mode", mode),
+  close: () => ipcRenderer.invoke("close-window"),
   metadata: () => ipcRenderer.invoke("track-metadata"),
   localMetadata: (url) => ipcRenderer.invoke("local-metadata", url),
   exportPreset: (p) => ipcRenderer.invoke("preset-export", p),

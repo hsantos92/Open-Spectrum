@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "before": {
+    "fps": 57.91891352104896,
+    "longestFrameGap": 33.299999999999955,
+    "viewport": {
+      "width": 1280,
+      "height": 850
+    },
+    "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+    "webglError": 0,
+    "drawCalls": 1,
+    "renderSize": {
+      "width": 1920,
+      "height": 1275,
+      "ratio": 1.5,
+      "budget": 3686400
+    },
+    "resizeCount": 1
+  },
+  "transitions": [
+    {
+      "expanded": {
+        "fps": 58.32361273124767,
+        "longestFrameGap": 31.799999999999727,
+        "viewport": {
+          "width": 1080,
+          "height": 1889
+        },
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+        "webglError": 0,
+        "drawCalls": 1,
+        "renderSize": {
+          "width": 1451,
+          "height": 2539,
+          "ratio": 1.3442293450910778,
+          "budget": 3686400
+        },
+        "resizeCount": 2
+      },
+      "restored": {
+        "fps": 58.99410058996298,
+        "longestFrameGap": 30.099999999999454,
+        "viewport": {
+          "width": 1280,
+          "height": 850
+        },
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+        "webglError": 0,
+        "drawCalls": 1,
+        "renderSize": {
+          "width": 1920,
+          "height": 1275,
+          "ratio": 1.5,
+          "budget": 3686400
+        },
+        "resizeCount": 3
+      },
+      "native": {
+        "maximized": true,
+        "fullscreen": false,
+        "minAlpha": 0,
+        "maxAlpha": 255
+      },
+      "entering": {
+        "longestFrameGap": 189.39999999925476,
+        "resizeCount": 2
+      },
+      "leaving": {
+        "longestFrameGap": 171.5,
+        "resizeCount": 3
+      }
+    },
+    {
+      "expanded": {
+        "fps": 59.15680719879102,
+        "longestFrameGap": 30.700000000000728,
+        "viewport": {
+          "width": 1080,
+          "height": 1889
+        },
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+        "webglError": 0,
+        "drawCalls": 1,
+        "renderSize": {
+          "width": 1451,
+          "height": 2539,
+          "ratio": 1.3442293450910778,
+          "budget": 3686400
+        },
+        "resizeCount": 4
+      },
+      "restored": {
+        "fps": 58.99410058996298,
+        "longestFrameGap": 32,
+        "viewport": {
+          "width": 1280,
+          "height": 850
+        },
+        "renderer": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 4090/PCIe/SSE2, OpenGL ES 3.2)",
+        "webglError": 0,
+        "drawCalls": 1,
+        "renderSize": {
+          "width": 1920,
+          "height": 1275,
+          "ratio": 1.5,
+          "budget": 3686400
+        },
+        "resizeCount": 5
+      },
+      "native": {
+        "maximized": true,
+        "fullscreen": false,
+        "minAlpha": 0,
+        "maxAlpha": 211
+      },
+      "entering": {
+        "longestFrameGap": 184,
+        "resizeCount": 4
+      },
+      "leaving": {
+        "longestFrameGap": 175.099999999813,
+        "resizeCount": 5
+      }
+    }
+  ],
+  "errors": []
+}

@@ -18,18 +18,28 @@ let win,
   lastFrame = { bins: new Array(96).fill(0), rms: 0 },
   allowedFiles = new Map();
 const verify = process.argv.includes("--verify");
+const verifyTransparency = process.argv.includes("--verify-transparency");
+const verifyExpand = process.argv.includes("--verify-expand");
+let windowMode = "normal",
+  switchingWindow = false;
+const windowSessions = new Map();
 let peak = 0,
   packets = 0,
   errors = [];
 app.setName(
-  process.argv.includes("--next") ? "Open Spectrum Next" : "Open Spectrum",
+  process.argv.includes("--preview")
+    ? "Open Spectrum Preview"
+    : process.argv.includes("--next")
+      ? "Open Spectrum Next"
+      : "Open Spectrum",
 );
 app.commandLine.appendSwitch(
   "disable-features",
   "Vulkan,VulkanFromANGLE,DefaultANGLEVulkan",
 );
 app.commandLine.appendSwitch("use-angle", "gl");
-if (verify) app.setPath("userData", path.join(__dirname, ".verify-profile"));
+if (verify || verifyTransparency || verifyExpand)
+  app.setPath("userData", path.join(__dirname, ".verify-profile"));
 protocol.registerSchemesAsPrivileged([
   {
     scheme: "spectrum-media",
@@ -115,10 +125,29 @@ async function start(name) {
 ipcMain.handle("sources", () => sources());
 ipcMain.handle("capture", (_, name) => start(name));
 ipcMain.handle("stop", () => stop());
-ipcMain.handle("fullscreen", () => {
+let expandPending = false;
+async function toggleExpanded() {
+  if (expandPending) return;
+  expandPending = true;
+  setTimeout(() => {
+    expandPending = false;
+  }, 400);
+  if (windowMode === "transparent") {
+    if (win.isFullScreen()) {
+      win.setFullScreen(false);
+      return false;
+    }
+    if (win.isMaximized()) {
+      win.unmaximize();
+      return false;
+    }
+    win.maximize();
+    return true;
+  }
   win.setFullScreen(!win.isFullScreen());
   return win.isFullScreen();
-});
+}
+ipcMain.handle("fullscreen", () => toggleExpanded());
 ipcMain.handle("music", async () => {
   const result = await dialog.showOpenDialog(win, {
     properties: ["openFile", "multiSelections"],
@@ -214,21 +243,17 @@ ipcMain.handle("diagnostics", async () => ({
   features: app.getGPUFeatureStatus(),
   gpu: await app.getGPUInfo("complete"),
 }));
-app.whenReady().then(async () => {
-  protocol.handle("spectrum-media", async (request) => {
-    const p = allowedFiles.get(new URL(request.url).pathname.slice(1));
-    if (!p) return new Response("Not found", { status: 404 });
-    const response = await net.fetch(pathToFileURL(p).href);
-    const headers = new Headers(response.headers);
-    headers.set("Access-Control-Allow-Origin", "*");
-    return new Response(response.body, { status: response.status, headers });
-  });
+async function createWindow(bounds = null, sessionData = null) {
   win = new BrowserWindow({
-    width: 1280,
-    height: 850,
+    width: bounds?.width || 1280,
+    height: bounds?.height || 850,
     minWidth: 800,
     minHeight: 550,
-    backgroundColor: "#000000",
+    frame: windowMode === "normal",
+    transparent: windowMode === "transparent",
+    hasShadow: windowMode === "normal",
+    backgroundColor: windowMode === "transparent" ? "#00000000" : "#000000",
+    show: false,
     title: app.getName(),
     icon: path.join(__dirname, "assets/icon.svg"),
     webPreferences: {
@@ -250,7 +275,282 @@ app.whenReady().then(async () => {
   win.webContents.on("render-process-gone", (_e, d) =>
     console.error("Renderer exit", d),
   );
-  await win.loadFile("index.html");
+  const created = win;
+  windowSessions.set(created.webContents.id, sessionData);
+  await created.loadFile("index.html", { query: { background: windowMode } });
+  await created.webContents.executeJavaScript(
+    `(async()=>{const deadline=performance.now()+10000;while(!window.sessionReady){if(performance.now()>deadline)throw Error('Window session did not initialize.');await new Promise(r=>setTimeout(r,25));}})()`,
+  );
+  created.show();
+  return created;
+}
+ipcMain.handle("window-session", (event) => {
+  const saved = windowSessions.get(event.sender.id) || null;
+  windowSessions.delete(event.sender.id);
+  return saved;
+});
+ipcMain.handle("close-window", (event) => {
+  if (event.sender === win.webContents) win.close();
+});
+async function changeWindowMode(mode) {
+  if (!["normal", "transparent"].includes(mode))
+    throw Error("Unknown background mode.");
+  if (switchingWindow || mode === windowMode) return false;
+  switchingWindow = true;
+  const old = win,
+    previous = windowMode;
+  try {
+    const snapshot = await old.webContents.executeJavaScript(
+      "window.sessionSnapshot()",
+    );
+    const fullscreen = old.isFullScreen() || old.isMaximized();
+    windowMode = mode;
+    const created = await createWindow(old.getBounds(), snapshot);
+    if (fullscreen) {
+      if (windowMode === "transparent") created.maximize();
+      else created.setFullScreen(true);
+    }
+    fs.mkdirSync(app.getPath("userData"), { recursive: true });
+    fs.writeFileSync(
+      path.join(app.getPath("userData"), "window-mode.json"),
+      JSON.stringify({ mode }),
+    );
+    old.destroy();
+    return true;
+  } catch (error) {
+    if (win !== old && !win.isDestroyed()) win.destroy();
+    win = old;
+    windowMode = previous;
+    throw error;
+  } finally {
+    switchingWindow = false;
+  }
+}
+ipcMain.handle("window-mode", (event, mode) => {
+  if (
+    event.sender !== win.webContents ||
+    event.senderFrame !== win.webContents.mainFrame
+  )
+    throw Error("Unknown window.");
+  return changeWindowMode(mode);
+});
+app.whenReady().then(async () => {
+  try {
+    const value = JSON.parse(
+      fs.readFileSync(
+        path.join(app.getPath("userData"), "window-mode.json"),
+        "utf8",
+      ),
+    );
+    if (value.mode === "transparent") windowMode = value.mode;
+  } catch {}
+  if (process.argv.includes("--transparent")) windowMode = "transparent";
+  if (process.argv.includes("--opaque")) windowMode = "normal";
+
+  protocol.handle("spectrum-media", async (request) => {
+    const p = allowedFiles.get(new URL(request.url).pathname.slice(1));
+    if (!p) return new Response("Not found", { status: 404 });
+    const response = await net.fetch(pathToFileURL(p).href);
+    const headers = new Headers(response.headers);
+    headers.set("Access-Control-Allow-Origin", "*");
+    return new Response(response.body, { status: response.status, headers });
+  });
+  await createWindow();
+  if (verifyExpand) {
+    try {
+      await win.webContents.executeJavaScript(
+        "window.previewTransparentRing()",
+      );
+      const before = await win.webContents.executeJavaScript(
+        "window.samplePerformance(1000)",
+      );
+      const transitions = [];
+      for (let i = 0; i < 2; i++) {
+        await win.webContents.executeJavaScript("window.resetTransitionTiming()");
+        await toggleExpanded();
+        await new Promise((r) => setTimeout(r, 900));
+        const entering=await win.webContents.executeJavaScript("window.transitionTiming()");
+        const expanded = await win.webContents.executeJavaScript(
+          "window.samplePerformance(1200)",
+        );
+        const image = await win.webContents.capturePage();
+        const pixels = image.toBitmap();
+        let min = 255,
+          max = 0;
+        for (let k = 3; k < pixels.length; k += 4 * 37) {
+          min = Math.min(min, pixels[k]);
+          max = Math.max(max, pixels[k]);
+        }
+        const native = {
+          maximized: win.isMaximized(),
+          fullscreen: win.isFullScreen(),
+          minAlpha: min,
+          maxAlpha: max,
+        };
+        if (i === 0)
+          fs.writeFileSync(
+            path.join(__dirname, "expanded-preview.png"),
+            image.toPNG(),
+          );
+        await win.webContents.executeJavaScript("window.resetTransitionTiming()");
+        await toggleExpanded();
+        await new Promise((r) => setTimeout(r, 900));
+        const leaving=await win.webContents.executeJavaScript("window.transitionTiming()");
+        const restored = await win.webContents.executeJavaScript(
+          "window.samplePerformance(1000)",
+        );
+        transitions.push({ expanded, restored, native, entering, leaving });
+      }
+      const report = {
+        passed: transitions.every(
+          (t) =>
+            t.native.maximized &&
+            !t.native.fullscreen &&
+            t.native.minAlpha === 0 &&
+            t.expanded.webglError === 0 &&
+            t.restored.webglError === 0 &&
+            t.expanded.renderSize.width * t.expanded.renderSize.height <=
+              t.expanded.renderSize.budget &&
+            t.restored.resizeCount - t.expanded.resizeCount <= 2 &&
+            t.restored.fps > 30,
+        ),
+        before,
+        transitions,
+        errors,
+      };
+      fs.writeFileSync(
+        path.join(__dirname, "fullscreen-validation.json"),
+        JSON.stringify(report, null, 2),
+      );
+      console.log(JSON.stringify(report));
+      app.exit(report.passed && errors.length === 0 ? 0 : 1);
+    } catch (error) {
+      console.error(error);
+      app.exit(1);
+    }
+    return;
+  }
+  if (verifyTransparency) {
+    try {
+      await new Promise((r) => setTimeout(r, 1800));
+      const opaque = await win.webContents.executeJavaScript(
+        "window.verifyAlpha()",
+      );
+      await win.webContents.executeJavaScript("window.previewProcedural()");
+      const before = await win.webContents.executeJavaScript(
+        "window.sessionSnapshot()",
+      );
+      await changeWindowMode("transparent");
+      await new Promise((r) => setTimeout(r, 800));
+      const after = await win.webContents.executeJavaScript(
+        "window.sessionSnapshot()",
+      );
+      const transparent = await win.webContents.executeJavaScript(
+        "window.verifyAlpha()",
+      );
+      await win.webContents.executeJavaScript("window.previewProcedural()");
+      await new Promise((r) => setTimeout(r, 200));
+      fs.writeFileSync(
+        path.join(__dirname, "transparent-procedural.png"),
+        (await win.webContents.capturePage()).toPNG(),
+      );
+      await win.webContents.executeJavaScript(
+        "window.previewTransparentRing()",
+      );
+      await new Promise((r) => setTimeout(r, 200));
+      const nativeImage = await win.webContents.capturePage();
+      fs.writeFileSync(
+        path.join(__dirname, "transparent-preview.png"),
+        nativeImage.toPNG(),
+      );
+      const rgba = nativeImage.toBitmap();
+      let min = 255,
+        max = 0;
+      for (let i = 3; i < rgba.length; i += 4 * 37) {
+        min = Math.min(min, rgba[i]);
+        max = Math.max(max, rgba[i]);
+      }
+      const nativeAlpha = { min, max, passed: min === 0 && max > 200 };
+      const n = 48000 * 4,
+        buffer = Buffer.alloc(44 + n * 2);
+      buffer.write("RIFF");
+      buffer.writeUInt32LE(36 + n * 2, 4);
+      buffer.write("WAVEfmt ", 8);
+      buffer.writeUInt32LE(16, 16);
+      buffer.writeUInt16LE(1, 20);
+      buffer.writeUInt16LE(1, 22);
+      buffer.writeUInt32LE(48000, 24);
+      buffer.writeUInt32LE(96000, 28);
+      buffer.writeUInt16LE(2, 32);
+      buffer.writeUInt16LE(16, 34);
+      buffer.write("data", 36);
+      buffer.writeUInt32LE(n * 2, 40);
+      for (let i = 0; i < n; i++)
+        buffer.writeInt16LE(
+          Math.round(800 * Math.sin((i * 2 * Math.PI * 440) / 48000)),
+          44 + i * 2,
+        );
+      fs.writeFileSync("/tmp/spectrum-transparency-tone.wav", buffer);
+      allowedFiles.set(
+        "transparency-tone",
+        "/tmp/spectrum-transparency-tone.wav",
+      );
+      const playback = await win.webContents.executeJavaScript(
+        "window.verifyPlayback('spectrum-media://track/transparency-tone')",
+      );
+      const expected = await win.webContents.executeJavaScript(
+        "window.sessionSnapshot()",
+      );
+      await changeWindowMode("normal");
+      await new Promise((r) => setTimeout(r, 800));
+      const restored = await win.webContents.executeJavaScript(
+        "window.sessionSnapshot()",
+      );
+      const sessionPreserved =
+        before.preferences.preset === after.preferences.preset &&
+        before.demo === after.demo &&
+        expected.preferences.preset === restored.preferences.preset &&
+        expected.paused === restored.paused &&
+        expected.playlist[0].url === restored.playlist[0].url &&
+        Math.abs(expected.position - restored.position) < 0.15 &&
+        before.preferences.gain === restored.preferences.gain;
+      const report = {
+        passed:
+          opaque.passed &&
+          transparent.passed &&
+          sessionPreserved &&
+          nativeAlpha.passed &&
+          playback.passed &&
+          errors.length === 0,
+        opaque,
+        transparent,
+        nativeAlpha,
+        playback,
+        sessionPreserved,
+        features: app.getGPUFeatureStatus(),
+        errors,
+      };
+      fs.writeFileSync(
+        path.join(__dirname, "transparency-validation.json"),
+        JSON.stringify(report, null, 2),
+      );
+      console.log(
+        JSON.stringify({
+          passed: report.passed,
+          opaque: opaque.passed,
+          transparent: transparent.passed,
+          nativeAlpha,
+          sessionPreserved,
+          errors,
+        }),
+      );
+      app.exit(report.passed ? 0 : 1);
+    } catch (error) {
+      console.error(error);
+      app.exit(1);
+    }
+    return;
+  }
   if (verify) {
     try {
       await new Promise((r) => setTimeout(r, 2500));
@@ -280,13 +580,23 @@ app.whenReady().then(async () => {
       );
       await new Promise((r) => setTimeout(r, 500));
       await win.webContents.executeJavaScript("window.previewProcedural()");
-      await new Promise((r)=>setTimeout(r,300));
-      fs.writeFileSync(path.join(__dirname,'procedural.png'),(await win.webContents.capturePage()).toPNG());
-      await win.webContents.executeJavaScript("document.querySelector('#settingsButton').click()");
-      await new Promise((r)=>setTimeout(r,200));
-      fs.writeFileSync(path.join(__dirname,'settings-preview.png'),(await win.webContents.capturePage()).toPNG());
-      await win.webContents.executeJavaScript("document.querySelector('#closeSettings').click();document.querySelector('#demo').click()");
-      await new Promise((r)=>setTimeout(r,300));
+      await new Promise((r) => setTimeout(r, 300));
+      fs.writeFileSync(
+        path.join(__dirname, "procedural.png"),
+        (await win.webContents.capturePage()).toPNG(),
+      );
+      await win.webContents.executeJavaScript(
+        "document.querySelector('#settingsButton').click()",
+      );
+      await new Promise((r) => setTimeout(r, 200));
+      fs.writeFileSync(
+        path.join(__dirname, "settings-preview.png"),
+        (await win.webContents.capturePage()).toPNG(),
+      );
+      await win.webContents.executeJavaScript(
+        "document.querySelector('#closeSettings').click();document.querySelector('#demo').click()",
+      );
+      await new Promise((r) => setTimeout(r, 300));
       // Play a quiet deterministic tone through the real desktop output to verify monitor capture.
       const n = 48000 * 2,
         buf = Buffer.alloc(44 + n * 2);

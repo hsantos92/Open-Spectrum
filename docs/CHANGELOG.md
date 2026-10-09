@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — transparency preview
+
+Add a persistent solid/transparent Background option, transparent launcher action,
+a frameless drag strip and close button, alpha-preserving final glow composition,
+and window-mode switching that retains visual/audio session state. Empty canvas
+pixels remain clear. The desktop app remains Electron while native development
+continues.
+
 ## 0.2.0 — successor development
 
 Expanded the visual library to 56 presets and added four procedural shader

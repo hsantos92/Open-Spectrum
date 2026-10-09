@@ -473,4 +473,63 @@ header,
 #settings {
   width: 390px;
 }
-#settings input[type="text"] {display:block;width:100%;margin-top:12px;padding:10px;background:#222b2d;color:#e5eeeb;border:1px solid #ffffff20;border-radius:8px;}
+#settings input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #222b2d;
+  color: #e5eeeb;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+}
+
+html.transparentWindow,
+html.transparentWindow body {
+  background: transparent;
+  color-scheme: dark;
+}
+#dragHandle {
+  display: none;
+}
+html.transparentWindow #dragHandle {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 30%;
+  right: 30%;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 10px;
+  color: #c9e1dc;
+  background: #152222aa;
+  border-radius: 0 0 9px 9px;
+  z-index: 5;
+  app-region: drag;
+  -webkit-app-region: drag;
+  user-select: none;
+  cursor: grab;
+}
+#closeWindow {
+  display: none;
+}
+html.transparentWindow #closeWindow {
+  display: block;
+  app-region: no-drag;
+  -webkit-app-region: no-drag;
+}
+.hiddenControls #dragHandle {
+  opacity: 0;
+  pointer-events: none;
+}
+#dragHandle {
+  transition: opacity 0.3s;
+}
+html.transparentWindow header,
+html.transparentWindow #status,
+html.transparentWindow #trackInfo {
+  text-shadow:
+    0 1px 4px #000,
+    0 0 10px #000;
+}

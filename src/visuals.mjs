@@ -2,19 +2,29 @@ import * as THREE from "../node_modules/three/build/three.module.js";
 import { EffectComposer } from "../node_modules/three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "../node_modules/three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "../node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { ShaderPass } from "../node_modules/three/examples/jsm/postprocessing/ShaderPass.js";
+import { alphaOutputShader } from "./alpha-output.mjs";
 import catalog from "../presets/builtin.json" with { type: "json" };
 export const presets = catalog;
 import { procedural } from "./procedural.mjs";
+import { renderSize } from "./render-size.mjs";
 const TAU = Math.PI * 2;
 export class Visuals {
-  constructor(canvas) {
+  constructor(canvas, { transparent = false } = {}) {
+    this.transparent = transparent;
     this.renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
+      alpha: true,
+      premultipliedAlpha: false,
       powerPreference: "high-performance",
       preserveDrawingBuffer: true,
     });
-    this.renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+    this.renderer.setPixelRatio(1);
+    this.qualityLimit = 1.5;
+    this.resizing = false;
+    this.resizeCount = 0;
+    this.resizeTimer = null;
     this.camera = new THREE.PerspectiveCamera(52, 1, 0.1, 100);
     this.camera.position.set(0, 0, 13);
     this.scene = new THREE.Scene();
@@ -29,6 +39,9 @@ export class Visuals {
       0.25,
     );
     this.composer.addPass(this.bloom);
+    this.alphaOutput = new ShaderPass(alphaOutputShader);
+    this.alphaOutput.enabled = this.transparent;
+    this.composer.addPass(this.alphaOutput);
     this.bins = new Float32Array(96);
     this.level = 0;
     this.mode = 1;
@@ -40,13 +53,34 @@ export class Visuals {
     this.setPreset(0);
     this.resize();
   }
+  get drawMode() {
+    return this.transparent ? this.mode % 2 : this.mode;
+  }
+  scheduleResize() {
+    this.resizing = true;
+    clearTimeout(this.resizeTimer);
+    this.resizeTimer = setTimeout(() => {
+      this.resize();
+      this.resizing = false;
+    }, 160);
+  }
   resize() {
     const c = this.renderer.domElement;
-    this.renderer.setSize(c.clientWidth, c.clientHeight, false);
-    this.camera.aspect = c.clientWidth / c.clientHeight;
+    const width = Math.max(1, c.clientWidth),
+      height = Math.max(1, c.clientHeight);
+    const target = renderSize(
+      width,
+      height,
+      devicePixelRatio,
+      this.qualityLimit,
+    );
+    this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
-    this.composer.setPixelRatio(this.renderer.getPixelRatio());
-    this.composer.setSize(c.clientWidth, c.clientHeight);
+    if (c.width === target.width && c.height === target.height) return;
+    this.renderer.setSize(target.width, target.height, false);
+    this.composer.setSize(target.width, target.height);
+    this.resizeCount++;
+    this.renderTarget = target;
   }
   dispose() {
     for (const o of [...this.group.children]) {
@@ -82,7 +116,7 @@ export class Visuals {
   }
   color(c, i, h, brightness = 1) {
     const col = new THREE.Color();
-    if (this.mode % 2 === 0) col.setRGB(brightness, brightness, brightness);
+    if (this.drawMode % 2 === 0) col.setRGB(brightness, brightness, brightness);
     else if (this.palette === "custom")
       col
         .set(this.paletteColors[0])
@@ -91,7 +125,8 @@ export class Visuals {
           (Math.sin(h * TAU) + 1) / 2,
         );
     else col.setHSL((h + 0.54) % 1, 0.9, 0.56);
-    if (this.mode >= 2) col.multiplyScalar(this.mode % 2 === 0 ? 0.25 : 0.65);
+    if (this.drawMode >= 2)
+      col.multiplyScalar(this.drawMode % 2 === 0 ? 0.25 : 0.65);
     c[i * 3] = col.r;
     c[i * 3 + 1] = col.g;
     c[i * 3 + 2] = col.b;
@@ -117,7 +152,7 @@ export class Visuals {
         p.uniforms.time.value = t;
         p.uniforms.energy.value = this.level;
         p.uniforms.bass.value = this.features.bass;
-        p.uniforms.mode.value = this.mode;
+        p.uniforms.mode.value = this.drawMode;
         p.uniforms.aspect.value = this.camera.aspect;
         p.uniforms.deform.value = config.deform * this.tuning.deform;
         p.uniforms.palette.value = this.palette === "custom" ? 1 : 0;
@@ -263,8 +298,8 @@ export class Visuals {
           o.rotation.set(t * 0.15 + i, t * 0.2 + i * 0.4, t * 0.07);
           o.scale.setScalar(1 + amp(i * 5) * 0.6);
           o.material.color.set(
-            this.mode % 2 === 0
-              ? this.mode >= 2
+            this.drawMode % 2 === 0
+              ? this.drawMode >= 2
                 ? 0x333333
                 : 0xffffff
               : this.palette === "custom"
@@ -460,8 +495,12 @@ export class Visuals {
     this.features = features;
     for (let i = 0; i < 96; i++) this.bins[i] = bins[i];
     this.level += (level - this.level) * 0.18;
-    this.scene.background = new THREE.Color(
-      this.mode >= 2 ? 0xf2f1ef : 0x000000,
+    this.scene.background = this.transparent
+      ? null
+      : new THREE.Color(this.drawMode >= 2 ? 0xf2f1ef : 0x000000);
+    this.renderer.setClearColor(
+      this.drawMode >= 2 ? 0xf2f1ef : 0x000000,
+      this.transparent ? 0 : 1,
     );
     this.group.rotation.set(0, 0, 0);
     this.updateFn(t * (this.config.speed ?? 1) * this.tuning.speed);
@@ -477,11 +516,11 @@ export class Visuals {
     for (const o of this.group.children) {
       if (o.isPoints)
         o.material.blending =
-          this.mode >= 2 ? THREE.NormalBlending : THREE.AdditiveBlending;
+          this.drawMode >= 2 ? THREE.NormalBlending : THREE.AdditiveBlending;
     }
     this.bloom.strength = this.tuning.bloom;
-    this.bloom.enabled = this.mode < 2;
-    if (this.mode < 2) this.composer.render();
+    this.bloom.enabled = this.drawMode < 2;
+    if (this.drawMode < 2 || this.transparent) this.composer.render();
     else this.renderer.render(this.scene, this.camera);
   }
   diagnostics() {
@@ -493,6 +532,8 @@ export class Visuals {
         : gl.getParameter(gl.RENDERER),
       webglError: gl.getError(),
       drawCalls: this.renderer.info.render.calls,
+      renderSize: this.renderTarget,
+      resizeCount: this.resizeCount,
     };
   }
   thumbnail() {

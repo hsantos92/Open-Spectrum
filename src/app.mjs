@@ -3,6 +3,13 @@ import { validatePreset } from "./preset-schema.mjs";
 import { Visuals, presets } from "./visuals.mjs";
 const $ = (id) => document.getElementById(id),
   bridge = window.desktop;
+const restoredSession = await bridge.windowSession();
+const transparentWindow =
+  new URLSearchParams(location.search).get("background") === "transparent";
+document.documentElement.classList.toggle(
+  "transparentWindow",
+  transparentWindow,
+);
 const defaults = {
   preset: 0,
   mode: 1,
@@ -32,7 +39,11 @@ try {
 } catch {
   saved = {};
 }
-const state = { ...defaults, ...saved };
+const state = {
+  ...defaults,
+  ...saved,
+  ...(restoredSession?.preferences || {}),
+};
 for (const candidate of state.custom || []) {
   try {
     const p = validatePreset(candidate);
@@ -48,7 +59,7 @@ state.preset = Math.max(
 state.enabled = Array.isArray(state.enabled)
   ? state.enabled.filter((i) => presets[i])
   : defaults.enabled;
-const visuals = new Visuals($("visual"));
+const visuals = new Visuals($("visual"), { transparent: transparentWindow });
 const player = $("player");
 let sourceList,
   frame = { bins: new Array(96).fill(0), rms: 0 },
@@ -119,7 +130,7 @@ function setPreset(id, transition = false) {
 function setMode(mode) {
   state.mode = mode;
   visuals.mode = mode;
-  document.body.classList.toggle("lightMode", mode >= 2);
+  document.body.classList.toggle("lightMode", mode >= 2 && !transparentWindow);
   document
     .querySelectorAll("[data-mode]")
     .forEach((b) =>
@@ -385,7 +396,7 @@ for (const key of [
           ? el.value
           : Number(el.value);
     if (key === "quality") {
-      visuals.renderer.setPixelRatio(Math.min(devicePixelRatio, state.quality));
+      visuals.qualityLimit = state.quality;
       visuals.resize();
     }
     if (key === "showTrack")
@@ -442,15 +453,23 @@ window.addEventListener("keydown", (e) => {
     $("play").click();
   }
 });
-window.addEventListener("resize", () => visuals.resize());
+window.addEventListener("resize", () => visuals.scheduleResize());
 bridge.onFrame((f) => {
   frame = f;
   lastAudio = performance.now();
 });
 bridge.onStatus(message);
+let totalRendered = 0,
+  lastRenderedAt = 0,
+  longestFrameGap = 0;
 function animate(ms) {
   requestAnimationFrame(animate);
-  if (document.hidden || ms - lastRender < 1000 / state.fpsLimit - 0.5) return;
+  if (
+    document.hidden ||
+    visuals.resizing ||
+    ms - lastRender < 1000 / state.fpsLimit - 0.5
+  )
+    return;
   lastRender = ms;
   const open = ["gallery", "settings", "playlistPanel"].some(
     (id) => !$(id).hidden,
@@ -518,6 +537,10 @@ function animate(ms) {
       setPreset(available[Math.floor(Math.random() * available.length)], true);
     lastShuffle = t;
   }
+  totalRendered++;
+  if (lastRenderedAt)
+    longestFrameGap = Math.max(longestFrameGap, ms - lastRenderedAt);
+  lastRenderedAt = ms;
   frames++;
   if (ms - fpsAt >= 1000) {
     fps = Math.round((frames * 1000) / (ms - fpsAt));
@@ -768,10 +791,153 @@ window.verifyAll = async () => {
     results,
   };
 };
+window.sessionSnapshot = () => ({
+  preferences: JSON.parse(JSON.stringify(state)),
+  playlist: playlist.map((p) => ({ ...p })),
+  track,
+  playingFile,
+  paused: player.paused,
+  position: player.currentTime,
+  demo,
+  source: $("source").value,
+});
+$("windowMode").value = transparentWindow ? "transparent" : "normal";
+$("windowMode").onchange = async () => {
+  try {
+    $("windowMode").disabled = true;
+    await bridge.windowMode($("windowMode").value);
+  } catch (e) {
+    $("windowMode").disabled = false;
+    $("windowMode").value = transparentWindow ? "transparent" : "normal";
+    message(e.message);
+  }
+};
+$("closeWindow").onclick = () => bridge.close();
 buildGallery();
-visuals.renderer.setPixelRatio(Math.min(devicePixelRatio, state.quality));
+visuals.qualityLimit = state.quality;
 visuals.resize();
-await useSystem();
+if (restoredSession) {
+  playlist = restoredSession.playlist || [];
+  track = restoredSession.track || 0;
+  renderQueue();
+  if (restoredSession.playingFile && playlist.length) {
+    await playTrack(track);
+    if (restoredSession.paused) player.pause();
+    if (player.readyState < 1)
+      await new Promise((resolve) =>
+        player.addEventListener("loadedmetadata", resolve, { once: true }),
+      );
+    const position = Math.min(
+      restoredSession.position || 0,
+      Math.max(
+        0,
+        (Number.isFinite(player.duration) ? player.duration : Infinity) - 0.01,
+      ),
+    );
+    if (position > 0) {
+      const seeked = new Promise((resolve) => {
+        player.addEventListener("seeked", resolve, { once: true });
+        setTimeout(resolve, 1000);
+      });
+      player.currentTime = position;
+      await seeked;
+    }
+  } else if (restoredSession.demo) {
+    await $("demo").onclick();
+  } else {
+    await refresh();
+    if (
+      restoredSession.source &&
+      sourceList?.sources.some((s) => s.name === restoredSession.source)
+    )
+      await capture(restoredSession.source);
+    else await useSystem();
+  }
+} else await useSystem();
+window.sessionReady = true;
 requestAnimationFrame(animate);
 
-window.previewProcedural=async()=>{for(const key of ['gallery','settings','playlistPanel'])$(key).hidden=true;setPreset(48);if(!demo)await $('demo').onclick();lastActivity=performance.now();manualHide=false;document.body.classList.remove('hiddenControls');};
+window.previewProcedural = async () => {
+  for (const key of ["gallery", "settings", "playlistPanel"])
+    $(key).hidden = true;
+  setPreset(48);
+  if (!demo) await $("demo").onclick();
+  lastActivity = performance.now();
+  manualHide = false;
+  document.body.classList.remove("hiddenControls");
+};
+
+window.verifyAlpha = () => {
+  const original = { preset: state.preset, mode: visuals.mode };
+  const results = [];
+  const gl = visuals.renderer.getContext();
+  const width = gl.drawingBufferWidth,
+    height = gl.drawingBufferHeight,
+    pixels = new Uint8Array(width * height * 4);
+  for (let mode = 0; mode < 4; mode++)
+    for (const p of presets) {
+      visuals.mode = mode;
+      visuals.setPreset(p.id);
+      const f = demoFrame(3);
+      visuals.render(3, f.bins, f.rms);
+      gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+      let min = 255,
+        max = 0,
+        clear = 0,
+        total = 0;
+      for (let i = 3; i < pixels.length; i += 4 * 37) {
+        const a = pixels[i];
+        min = Math.min(min, a);
+        max = Math.max(max, a);
+        if (a < 250) clear++;
+        total++;
+      }
+      results.push({
+        preset: p.name,
+        mode,
+        minAlpha: min,
+        maxAlpha: max,
+        nonOpaqueRatio: clear / total,
+        webglError: gl.getError(),
+      });
+    }
+  visuals.mode = original.mode;
+  setPreset(original.preset);
+  return {
+    passed: results.every(
+      (r) =>
+        r.webglError === 0 &&
+        (transparentWindow
+          ? r.minAlpha < 240 && r.maxAlpha > r.minAlpha + 5
+          : r.minAlpha === 255),
+    ),
+    transparent: transparentWindow,
+    renderer: visuals.diagnostics().renderer,
+    combinations: results.length,
+    results,
+  };
+};
+window.previewTransparentRing = async () => {
+  for (const key of ["gallery", "settings", "playlistPanel"])
+    $(key).hidden = true;
+  setPreset(0);
+  if (!demo) await $("demo").onclick();
+  lastActivity = performance.now();
+  manualHide = false;
+  document.body.classList.remove("hiddenControls");
+};
+
+window.samplePerformance = async (duration = 1500) => {
+  const count = totalRendered,
+    start = performance.now();
+  longestFrameGap = 0;
+  await new Promise((r) => setTimeout(r, duration));
+  return {
+    fps: ((totalRendered - count) * 1000) / (performance.now() - start),
+    longestFrameGap,
+    viewport: { width: innerWidth, height: innerHeight },
+    ...visuals.diagnostics(),
+  };
+};
+window.resetTransitionTiming=()=>{longestFrameGap=0;lastRenderedAt=performance.now();};
+window.transitionTiming=()=>({longestFrameGap,resizeCount:visuals.resizeCount});
